@@ -29,13 +29,11 @@
         var alg = smart.patient.api.fetchAll({
                     type: 'AllergyIntolerances',
                     query: {
-                      "status": 'active, confirmed, unconfirmed'
+                      "status": 'active,confirmed,unconfirmed'
                       }
 
                   });
-  
-	  
-				  
+ 				  
 /*, date: 'gt 2020-01-01';*/
 
         $.when(pt, obv).fail(onError);
