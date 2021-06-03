@@ -27,29 +27,26 @@
 				  
 				  
         var alg = smart.patient.api.fetchAll({
-                    type: 'AllegyIntolerance',
-                    query: {
-                      status: {
-                        $or: ['active',
-                              'confirmed',
-                              'unconfirmed']
-                      }
+                    "type": 'AllergyIntolerances',
+                    "query": {
+                      "status": 'active,
+                              confirmed,
+                              unconfirmed'
                       }
 					  
-                    }
+                    
                   });
   
-				  
-				  
-				  
+	  
 				  
 /*, date: 'gt 2020-01-01';*/
 
         $.when(pt, obv).fail(onError);
 
-        $.when(pt, obv).done(function(patient, obv) {
+        $.when(pt, obv).done(function(patient, obv, allegies) {
 			console.log(patient);
 			console.log(obv);
+			console.log(allegies);
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
 
