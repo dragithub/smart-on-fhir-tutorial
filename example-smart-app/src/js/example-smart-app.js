@@ -21,6 +21,7 @@
                       }/*,
 					  date: 'gt 2020-01-01';*/
 					  category: 'vital-signs',
+					  
                     }
                   });
 
