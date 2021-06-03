@@ -22,7 +22,7 @@
                       },  
 					  category: 'vital-signs'
 
-                    }
+                    
                   });
 				  
 				  
