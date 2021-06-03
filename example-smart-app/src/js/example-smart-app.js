@@ -73,7 +73,7 @@
 		  if (allergies === 0) {
 			  allergyTable += "<tr><td>No Allergies Found<td><tr>";
 		  }
-		  allergyTable += "</table>"
+		  allergyTable += "</table>";
 
 
 		  
