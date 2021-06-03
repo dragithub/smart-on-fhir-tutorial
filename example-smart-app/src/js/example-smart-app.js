@@ -58,7 +58,25 @@
           var diastolicbp = getBloodPressureValue(byCodes('55284-4'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
+		  
+		  var allergyTable ="<table>";
+		  var allergyLen = allergies.length;
+		  for (var i= 0, i<allergyLen; i++ ){
+			var reactionStr =[]; 
+			if (allergies[i].reaction !== undefined) {
+				 for (var j=0, jLen=allergies[i].reaction.length; j<jLen;j++) {
+					 reactionStr.push(allergies[i].reaction[j].manifestation[0].text);
+				 }
+			  }
+			  allergyTable += "<tr><td>" + allergies[i].substance.text + "</td></tr>" ;
+		  }			  
+		  if (allergies === 0) {
+			  allergyTable += "<tr><td>No Allergies Found<td><tr>";
+		  }
+		  allergyTable += "</table>"
 
+
+		  
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
           p.gender = gender;
