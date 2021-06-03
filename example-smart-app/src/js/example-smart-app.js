@@ -64,7 +64,7 @@
 		  for (var i= 0; i < allergyLen; i++ ){
 			var reactionStr =[]; 
 			if (allergies[i].reaction !== undefined) {
-				 jLen=allergies[i].reaction.length;
+				 var jLen=allergies[i].reaction.length;
 				 for (var j=0; j<jLen;j++) {
 					 reactionStr.push(allergies[i].reaction[j].manifestation[0].text);
 				 }
