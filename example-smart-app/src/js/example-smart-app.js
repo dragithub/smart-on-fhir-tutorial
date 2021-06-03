@@ -24,6 +24,25 @@
 
                     }
                   });
+				  
+				  
+        var alg = smart.patient.api.fetchAll({
+                    type: 'AllegyIntolerance',
+                    query: {
+                      status: {
+                        $or: ['active',
+                              'confirmed',
+                              'unconfirmed']
+                      }
+                      }
+					  
+                    }
+                  });
+  
+				  
+				  
+				  
+				  
 /*, date: 'gt 2020-01-01';*/
 
         $.when(pt, obv).fail(onError);
