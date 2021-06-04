@@ -41,9 +41,6 @@
 			console.log(obv);
 			console.log(allergies);
           var byCodes = smart.byCodes(obv, 'code');
-		  
-          var byCodes = smart.byCodes(allergies, 'status');
-
           var gender = patient.gender;
 
           var fname = '';
@@ -71,7 +68,7 @@
 			  }
 			  allergyTable += "<tr><td>" + allergies[i].substance.text + "</td></tr>" ;
 		  }			  
-		  if (allergies === 0) {
+		  if (allergyLen === 0) {
 			  allergyTable += "<tr><td>No Allergies Found<td><tr>";
 		  }
 		  allergyTable += "</table>";
@@ -95,6 +92,8 @@
 
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
+		  
+		  p.allergies = allergyTable;
 
           ret.resolve(p);
         });
