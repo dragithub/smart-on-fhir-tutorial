@@ -66,7 +66,7 @@
 					 reactionStr.push(allergies[i].reaction[j].manifestation[0].text);
 				 }
 			  }
-			  allergyTable += "<tr><td>" + allergies[i].substance.text + "</td><td>" +reactionStr.join(", ") + "</td></tr>";
+			  allergyTable += "<tr><td>" + allergies[i].substance.text + "</td><td>" +reactionStr.join(", ") + "</td></tr>" ;
 		  }			  
 		  if (allergyLen === 0) {
 			  allergyTable += "<tr><td>No Allergies Found<td><tr>";
