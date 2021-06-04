@@ -163,7 +163,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
-   $('#allergyIntolerance').html(p.allergies);
+    $('#allergyIntolerance').html(p.allergies);
 	
   };
 
